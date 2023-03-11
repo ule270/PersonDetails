@@ -34,6 +34,7 @@ public class PersonHandler {
         }
         return result.toString();
 
+//        Alt way using .contains()
 //        StringBuilder result = new StringBuilder();
 //        int counter = 0;
 //        while (counter < personArray.length) {
