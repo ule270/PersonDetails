@@ -26,38 +26,56 @@ public class PersonHandler {
         StringBuilder result = new StringBuilder();
         int counter = 0;
         while (counter < personArray.length) {
-            String detail = Arrays.toString(personArray);
             Person currentPerson = personArray[counter];
-            if (detail.contains(currentPerson.toString())) {
+            if (result.indexOf(currentPerson.toString()) == -1) {
                 result.append(currentPerson.toString());
             }
             counter++;
         }
         return result.toString();
+
+//        StringBuilder result = new StringBuilder();
+//        int counter = 0;
+//        while (counter < personArray.length) {
+//            String detail = Arrays.toString(personArray);
+//            Person currentPerson = personArray[counter];
+//            if (detail.contains(currentPerson.toString())) {
+//                result.append(currentPerson.toString());
+//            }
+//            counter++;
+//        }
+//        return result.toString();
     }
 
 
 
     public String forLoop() {
-        String result = "";
+//        String result = "";
         // identify initial value
         // identify terminal condition
         // identify increment
 
         // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
+        // begin loop
+        // use `counter` to identify the `current Person` in the array
+        // get `string Representation` of `currentPerson`
+        // append `stringRepresentation` to `result` variable
+        // end loop
 
-        return result;
+        StringBuilder result = new StringBuilder();
+        for (int counter = 0; counter < personArray.length; counter++) {
+            Person currentPerson = personArray[counter];
+            if (result.indexOf(currentPerson.toString()) == -1) {
+                result.append(currentPerson.toString());
+            }
+        }
+        return result.toString();
+
     }
 
 
-
     public String forEachLoop() {
-        String result = "";
+//        String result = "";
         // identify array's type
         // identify array's variable-name
 
@@ -66,8 +84,13 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
-        return result;
+        StringBuilder result = new StringBuilder();
+        for (Person currentPerson : personArray) {
+            if (result.indexOf(currentPerson.toString()) == -1) {
+                result.append(currentPerson.toString());
+            }
+        }
+        return result.toString();
     }
 
 
