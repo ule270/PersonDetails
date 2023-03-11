@@ -1,5 +1,9 @@
 package com.zipcodewilmington;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by leon on 1/24/18.
  */
@@ -9,22 +13,27 @@ public class PersonHandler {
     public PersonHandler(Person[] personArray) {
         this.personArray = personArray;
     }
-
-    // NOTICE how the comments can be used to step-by-step break down the problem into 
-    // simple lines of code...
     
     public String whileLoop() {
-        String result = "";
-        // create a `counter`
-        // while `counter` is less than length of array
-            // begin loop
-
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
-        return result;
+//        String result = "";
+//         create a `counter`
+//         while `counter` is less than length of array
+//             begin loop
+//                 use `counter` to identify the `current Person` in the array
+//                 get `string Representation` of `currentPerson`
+//                 append `stringRepresentation` to `result` variable
+//             end loop
+        StringBuilder result = new StringBuilder();
+        int counter = 0;
+        while (counter < personArray.length) {
+            String detail = Arrays.toString(personArray);
+            Person currentPerson = personArray[counter];
+            if (detail.contains(currentPerson.toString())) {
+                result.append(currentPerson.toString());
+            }
+            counter++;
+        }
+        return result.toString();
     }
 
 
